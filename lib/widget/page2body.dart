@@ -45,7 +45,8 @@ class _Page2BodyState extends State<Page2Body> with SingleTickerProviderStateMix
   double calculateBmi(double weight, double height) {
     if (height > 0) {
       double heightInMeters = height / 100.0;
-      return weight / (heightInMeters * heightInMeters);
+      double res = weight / (heightInMeters * heightInMeters);
+      return double.parse(res.toStringAsFixed(2)) ;
     } else {
       return 0.0;
     }
